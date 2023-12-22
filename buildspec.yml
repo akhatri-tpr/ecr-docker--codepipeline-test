@@ -5,7 +5,7 @@ phases:
         java: corretto17
   pre_build:
     commands:
-      - echo Logging in to Amazon ECR...
+      - echo Logging in to Amazon ECR....
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}-${CODEBUILD_BUILD_NUMBER}
       - REPOSITORY_URI=513661464973.dkr.ecr.us-east-1.amazonaws.com/ecr-docker-image
